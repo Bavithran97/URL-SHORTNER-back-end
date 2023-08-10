@@ -45,7 +45,7 @@ app.post('/shorturl', async (req, res) => {
 
     await newURL.save();
     
-    res.json({ shortURL: `http://localhost:${PORT}/${newURL.shortCode}` });
+    res.json({ shortURL: `https://url-back-end.onrender.com/${newURL.shortCode}` });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
